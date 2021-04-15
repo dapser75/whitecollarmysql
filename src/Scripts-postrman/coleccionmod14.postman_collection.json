@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "64a8f6d4-ac49-4c38-8674-3ae599924ba1",
+		"name": "coleccionmod14",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/GET/shops/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"localhost:8080/GET/workers\r",
+							"localhost:8080/GET/workers/1"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/GET/shops/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GET",
+						"shops",
+						""
+					]
+				},
+				"description": "Peticion para mostrar todas las tiendas y su capacidad."
+			},
+			"response": []
+		},
+		{
+			"name": "/GET/cuadrostiendas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"localhost:8080/GET/workers\r",
+							"localhost:8080/GET/workers/1"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/GET/cuadrostiendas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GET",
+						"cuadrostiendas"
+					]
+				},
+				"description": "Peticion para listar todas las tiendas y sus cuadros asociados."
+			},
+			"response": []
+		},
+		{
+			"name": "/GET/cuadros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/GET/cuadros",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GET",
+						"cuadros"
+					]
+				},
+				"description": "Peticion pora mostrar todos los cuadros."
+			},
+			"response": []
+		},
+		{
+			"name": "/GET/shopoccupation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/GET/shopoccupation/?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GET",
+						"shopoccupation",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Peticion para ver el listado de tiendas, la capacidad y la ocupacion."
+			},
+			"response": []
+		},
+		{
+			"name": "POST/SHOPS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\" : \"La cuadreria 2\",\r\n\"capacity\" : \"3\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/POST/shops/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"POST",
+						"shops",
+						""
+					],
+					"query": [
+						{
+							"key": "id_tienda",
+							"value": "id_tienda",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "name",
+							"disabled": true
+						},
+						{
+							"key": "capacity",
+							"value": "capacity",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Insterar tienda"
+			},
+			"response": []
+		},
+		{
+			"name": "/POST/picture",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tittle\" : \"Eche homo\",\r\n\r\n\"prize\" : 2500 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/POST/picture/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"POST",
+						"picture",
+						""
+					],
+					"query": [
+						{
+							"key": "id_cuadro",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "Insterar un cuadro sion asignar tienda"
+			},
+			"response": []
+		},
+		{
+			"name": "GET/shopoccupationid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080//GET/shopoccupationid/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"GET",
+						"shopoccupationid",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/shops/{id}/pictures",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/GET/shops/\"1\"/pictures",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GET",
+						"shops",
+						"\"1\"",
+						"pictures"
+					]
+				},
+				"description": "Retorna todos los cuadros asociados a una tienda en concreto"
+			},
+			"response": []
+		},
+		{
+			"name": "/DELETE/shops/{id}/pictures?id=5",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "/DELETE/shops/pictures?id",
+					"path": [
+						"DELETE",
+						"shops",
+						"pictures"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null,
+							"description": "5"
+						}
+					]
+				},
+				"description": "Incendiar tienda"
+			},
+			"response": []
+		},
+		{
+			"name": "/POST/shops/{id}/pictures",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tittle\" : \"El nuevo Eche homo2\",\r\n\"prize\" : 2500 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/POST/shops/5/pictures",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"POST",
+						"shops",
+						"5",
+						"pictures"
+					]
+				},
+				"description": "Instertar cuadro en una tienda"
+			},
+			"response": []
+		}
+	]
+}
